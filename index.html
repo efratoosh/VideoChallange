@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="IE=Edge" http-equiv="x-ua-compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>Video Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href='./styles/style.css'>
+</head>
+
+<body>
+    <div class="page-content">
+        <header class="page-header">
+            <div class="base-width page-header-inner">
+                <a class="page-header-logo">
+                    <img src="./img/video.png" loading="lazy" alt="movie search app" />
+                </a>
+                <div class="page-header-title">
+                    Movie Search App
+                </div>
+            </div>
+        </header>
+
+
+        <div class="page-main">
+            <div class="base-width">
+                <div class="page-main-top">
+                    <h1>Video Search</h1>
+                    <div>Search by video name and year</div>
+                </div>
+                <div class="page-main-search">
+                    <div class="search-container">
+                        <form id="searchForm" novalidate>
+                            <div class="search-input-wrapper is-req">
+                                <label for="videoSearchName">*Movie Title</label>
+                                <input type="text" name="videoSearchName" id="videoSearchName" required aria-describedby="error-1">
+                                <span class="search-error" id="error-1"></span>
+                            </div>
+                            <div class="search-input-wrapper">
+                                <label for="videoSearchYear">Movie Year</label>
+                                <input type="text" name="videoSearchYear" id="videoSearchYear" aria-describedby="error-2">
+                                <span class="search-error" id="error-2"></span>
+                            </div>
+                            <div class="search-btn-wrapper">
+                                <button type="submit" class="search-btn js-search">Search <span></span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="page-main-results ">
+                    <div class="js-result-message results-message">
+
+                    </div>
+                    <div class="">
+                        <ul class="card-list js-results"></ul>
+                    </div>
+                    <div>
+                        <div class="js-pager pager">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="loader">
+                <img src="./img/default.png" alt="">
+            </div>
+
+        </div>
+
+        <footer class="page-footer">
+
+        </footer>
+    </div>   
+    <script src="form-visibility.js"></script>
+    <script src="video.js"></script>
+</body>
+
+</html>
